@@ -8,15 +8,15 @@ from aiohttp import web
 
 routes = web.RouteTableDef()
 
-@routes.post("/filterUsers")
-async def filterUsers(request):
+@routes.post("/filterJokes")
+async def filterJokes(request):
     try:
         json = await request.json()
         filtered = {}
 
         return web.json_response({"status": "OK"}, status=200)
     except Exception as e:
-        return web.json_response({"Status S2" : str(e)}, status=500)
+        return web.json_response({"Status S3" : str(e)}, status=500)
 
 
 app = web.Application()
